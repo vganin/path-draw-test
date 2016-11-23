@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TestPathRenderer">
+        <attr name="render_mode">
+            <flag name="wo_bitmap" value="0"/>
+            <flag name="with_bitmap" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
