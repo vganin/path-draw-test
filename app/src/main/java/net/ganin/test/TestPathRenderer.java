@@ -85,7 +85,7 @@ public class TestPathRenderer extends View {
 
         switch (renderMode) {
             case RENDER_MODE_WO_BITMAP:
-                drawOnCanvas(canvas, getDistortedWidth(), getDistortedHeight());
+                drawOnCanvas(canvas);
                 break;
             case RENDER_MODE_WITH_BITMAP:
                 if (bitmap == null) {
@@ -101,11 +101,11 @@ public class TestPathRenderer extends View {
     private Bitmap assembleNewBitmap(int w, int h) {
         Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
-        drawOnCanvas(canvas, w, h);
+        drawOnCanvas(canvas);
         return bitmap;
     }
 
-    private void drawOnCanvas(@NonNull Canvas canvas, float w, float h) {
+    private void drawOnCanvas(@NonNull Canvas canvas) {
         canvas.save();
         canvas.scale(DISTORTION_FACTOR, DISTORTION_FACTOR);
         canvas.drawPath(path, paint);
